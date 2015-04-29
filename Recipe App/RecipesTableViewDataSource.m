@@ -7,7 +7,24 @@
 //
 
 #import "RecipesTableViewDataSource.h"
-
+#import "RARecipes.h"
 @implementation RecipesTableViewDataSource
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+   
+    UITableViewCell *cell = [[UITableViewCell alloc]init];
+    cell.textLabel.text = [RARecipes titleAtIndex:indexPath.row];
+    
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // step#4
+    
+    return [RARecipes count];
+    
+}
 
 @end

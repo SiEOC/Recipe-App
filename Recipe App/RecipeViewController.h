@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecipeViewController : UIViewController
+@interface RecipeViewController : UIViewController <UITabBarControllerDelegate>
 
 @end
