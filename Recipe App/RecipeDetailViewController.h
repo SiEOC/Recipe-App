@@ -1,5 +1,5 @@
 //
-//  RecipeViewController.h
+//  RecipeDetailViewController.h
 //  Recipe App
 //
 //  Created by Gamaliel Tellez on 4/29/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecipeViewController : UIViewController <UITableViewDelegate>
+@interface RecipeDetailViewController : UIViewController
 
 @end

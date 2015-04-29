@@ -22,6 +22,7 @@
 		87C06A191AF16D17007E15EF /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A181AF16D17007E15EF /* RecipeViewController.m */; };
 		87C06A1C1AF17174007E15EF /* RARecipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A1B1AF17174007E15EF /* RARecipes.m */; };
 		87C06A1F1AF1723D007E15EF /* RecipesTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A1E1AF1723D007E15EF /* RecipesTableViewDataSource.m */; };
+		87C06A221AF184C3007E15EF /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A211AF184C3007E15EF /* RecipeDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		87C06A1B1AF17174007E15EF /* RARecipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RARecipes.m; sourceTree = "<group>"; };
 		87C06A1D1AF1723D007E15EF /* RecipesTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesTableViewDataSource.h; sourceTree = "<group>"; };
 		87C06A1E1AF1723D007E15EF /* RecipesTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesTableViewDataSource.m; sourceTree = "<group>"; };
+		87C06A201AF184C3007E15EF /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
+		87C06A211AF184C3007E15EF /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				71F67B60192C8D6A00E609F1 /* RAAppDelegate.m */,
 				87C06A171AF16D17007E15EF /* RecipeViewController.h */,
 				87C06A181AF16D17007E15EF /* RecipeViewController.m */,
+				87C06A201AF184C3007E15EF /* RecipeDetailViewController.h */,
+				87C06A211AF184C3007E15EF /* RecipeDetailViewController.m */,
 				87C06A1D1AF1723D007E15EF /* RecipesTableViewDataSource.h */,
 				87C06A1E1AF1723D007E15EF /* RecipesTableViewDataSource.m */,
 				87C06A1A1AF17174007E15EF /* RARecipes.h */,
@@ -256,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87C06A1C1AF17174007E15EF /* RARecipes.m in Sources */,
+				87C06A221AF184C3007E15EF /* RecipeDetailViewController.m in Sources */,
 				71F67B5D192C8D6A00E609F1 /* main.m in Sources */,
 				87C06A1F1AF1723D007E15EF /* RecipesTableViewDataSource.m in Sources */,
 				71F67B61192C8D6A00E609F1 /* RAAppDelegate.m in Sources */,
