@@ -9,6 +9,7 @@
 #import "RecipeViewController.h"
 #import "RecipesTableViewDataSource.h"
 #import "RecipeDetailViewController.h"
+#import "RARecipes.h"
 
 @interface RecipeViewController ()
 
@@ -50,7 +51,8 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     RecipeDetailViewController *detailViewController = [RecipeDetailViewController new];
-
+    detailViewController.title = [RARecipes titleAtIndex:indexPath.row];
+    
     
     [self.navigationController pushViewController:detailViewController animated:YES];
     
