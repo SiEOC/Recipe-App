@@ -7,17 +7,43 @@
 //
 
 #import "RecipeDetailViewController.h"
+#import "RARecipes.h"
+#import "RecipeViewController.h"
+static int topMargin = 20;
 
 @interface RecipeDetailViewController ()
+
 
 @end
 
 @implementation RecipeDetailViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+//    self.recipeIndex = [RecipeViewController ind];
+    
+    //creating the scroll view
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    //adding scroolview onto the view controller's view
+    [self.view addSubview:scrollView];
+    
+    //creating label,
+    UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(topMargin, 20, self.view.frame.size.width - 2 * topMargin, 100)];
+    descriptionLabel.backgroundColor = [UIColor greenColor];
+    descriptionLabel.text = [RARecipes descriptionAtIndex:self.recipeIndex];
+    descriptionLabel.numberOfLines = 5;
+    //depracated uitext allignment center
+    //descriptionLabel.textAlignment = UITextAlignmentCenter;
+    [descriptionLabel setTextAlignment:NSTextAlignmentJustified];
+    [descriptionLabel setFont:[UIFont fontWithName:@"Arial" size:15]];
+    [scrollView addSubview:descriptionLabel];
+    
+    
+    
+
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -17,6 +17,7 @@
 @property (strong ,nonatomic) UITableView *tableView;
 @property (strong,nonatomic) RecipesTableViewDataSource *dataSource;
 
+
 @end
 
 @implementation RecipeViewController
@@ -52,7 +53,8 @@
     
     RecipeDetailViewController *detailViewController = [RecipeDetailViewController new];
     detailViewController.title = [RARecipes titleAtIndex:indexPath.row];
-    
+    //property allows attributes, behivors, in instances value.
+    detailViewController.recipeIndex = indexPath.row;
     
     [self.navigationController pushViewController:detailViewController animated:YES];
     

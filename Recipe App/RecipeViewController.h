@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RecipeViewController : UIViewController <UITableViewDelegate>
-
+//@property (nonatomic) NSInteger indexToPass;
 @end
