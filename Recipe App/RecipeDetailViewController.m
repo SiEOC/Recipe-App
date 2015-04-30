@@ -49,6 +49,7 @@ static int topMargin = 20;
         int margin = 20;
         int yPoint = 140;
         
+     // slcaked to us needs help
         
         UILabel *volume = [[UILabel alloc] initWithFrame:CGRectMake(margin, yPoint, (self.view.frame.size.width - 2 * margin) / 4, 20)];
         volume.font = [UIFont boldSystemFontOfSize:17];
