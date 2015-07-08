@@ -25,35 +25,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // add title
-    
-    self.title = @"Recipe App";
-    
-    // initialize
+    self.title = @"Lunch Choices";
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
-    
-    // @property recipes
     self.dataSource = [RecipesTableViewDataSource new];
-    
-    // @property Recipes
     
     self.tableView.dataSource = self.dataSource;
     self.tableView.delegate = self;
-    //step #2
-    
     [self.view addSubview:self.tableView];
     
-    // Do any additional setup after loading the view.
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     RecipeDetailViewController *detailViewController = [RecipeDetailViewController new];
     detailViewController.title = [RARecipes titleAtIndex:indexPath.row];
-    //property allows attributes, behivors, in instances value.
     detailViewController.recipeIndex = indexPath.row;
     
     [self.navigationController pushViewController:detailViewController animated:YES];

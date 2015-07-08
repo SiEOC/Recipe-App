@@ -9,6 +9,8 @@
 #import "RecipeDetailViewController.h"
 #import "RARecipes.h"
 #import "RecipeViewController.h"
+
+static int margin =15;
 static int topMargin = 20;
 
 @interface RecipeDetailViewController ()
