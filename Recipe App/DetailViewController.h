@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecipeDetailViewController : UIViewController
+@interface DetailViewController : UIViewController
 @property (nonatomic, assign) NSInteger recipeIndex;
 @end

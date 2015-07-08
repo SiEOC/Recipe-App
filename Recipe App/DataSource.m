@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "RecipesTableViewDataSource.h"
-#import "RARecipes.h"
-@implementation RecipesTableViewDataSource
+#import "DataSource.h"
+#import "Recipes.h"
+@implementation DataSource
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -19,10 +19,10 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     }
-    cell.textLabel.text = [RARecipes titleAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [RARecipes descriptionAtIndex:indexPath.row];
-    
-    NSLog(@"%@",cell.detailTextLabel.text);
+    cell.textLabel.text = [Recipes titleAtIndex:indexPath.row];
+    cell.textLabel.textColor = [UIColor redColor];
+    cell.detailTextLabel.text = [Recipes descriptionAtIndex:indexPath.row];
+    cell.detailTextLabel.textColor = [UIColor brownColor];
     
     return cell;
 
@@ -30,9 +30,8 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // step#4
-    
-    return [RARecipes count];
+   
+    return [Recipes count];
     
 }
 

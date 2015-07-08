@@ -12,7 +12,7 @@
 		71F67B55192C8D6A00E609F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F67B54192C8D6A00E609F1 /* UIKit.framework */; };
 		71F67B5B192C8D6A00E609F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71F67B59192C8D6A00E609F1 /* InfoPlist.strings */; };
 		71F67B5D192C8D6A00E609F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F67B5C192C8D6A00E609F1 /* main.m */; };
-		71F67B61192C8D6A00E609F1 /* RAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F67B60192C8D6A00E609F1 /* RAAppDelegate.m */; };
+		71F67B61192C8D6A00E609F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F67B60192C8D6A00E609F1 /* AppDelegate.m */; };
 		71F67B63192C8D6A00E609F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F67B62192C8D6A00E609F1 /* Images.xcassets */; };
 		71F67B6A192C8D6A00E609F1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F67B69192C8D6A00E609F1 /* XCTest.framework */; };
 		71F67B6B192C8D6A00E609F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F67B50192C8D6A00E609F1 /* Foundation.framework */; };
@@ -20,9 +20,9 @@
 		71F67B74192C8D6A00E609F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71F67B72192C8D6A00E609F1 /* InfoPlist.strings */; };
 		71F67B76192C8D6A00E609F1 /* Recipe_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F67B75192C8D6A00E609F1 /* Recipe_AppTests.m */; };
 		87C06A191AF16D17007E15EF /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A181AF16D17007E15EF /* RecipeViewController.m */; };
-		87C06A1C1AF17174007E15EF /* RARecipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A1B1AF17174007E15EF /* RARecipes.m */; };
-		87C06A1F1AF1723D007E15EF /* RecipesTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A1E1AF1723D007E15EF /* RecipesTableViewDataSource.m */; };
-		87C06A221AF184C3007E15EF /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A211AF184C3007E15EF /* RecipeDetailViewController.m */; };
+		87C06A1C1AF17174007E15EF /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A1B1AF17174007E15EF /* Recipes.m */; };
+		87C06A1F1AF1723D007E15EF /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A1E1AF1723D007E15EF /* DataSource.m */; };
+		87C06A221AF184C3007E15EF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C06A211AF184C3007E15EF /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,8 @@
 		71F67B5A192C8D6A00E609F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71F67B5C192C8D6A00E609F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71F67B5E192C8D6A00E609F1 /* Recipe App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Recipe App-Prefix.pch"; sourceTree = "<group>"; };
-		71F67B5F192C8D6A00E609F1 /* RAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAAppDelegate.h; sourceTree = "<group>"; };
-		71F67B60192C8D6A00E609F1 /* RAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAAppDelegate.m; sourceTree = "<group>"; };
+		71F67B5F192C8D6A00E609F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		71F67B60192C8D6A00E609F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		71F67B62192C8D6A00E609F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71F67B68192C8D6A00E609F1 /* Recipe AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recipe AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F67B69192C8D6A00E609F1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -54,12 +54,12 @@
 		71F67B75192C8D6A00E609F1 /* Recipe_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recipe_AppTests.m; sourceTree = "<group>"; };
 		87C06A171AF16D17007E15EF /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
 		87C06A181AF16D17007E15EF /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
-		87C06A1A1AF17174007E15EF /* RARecipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RARecipes.h; sourceTree = "<group>"; };
-		87C06A1B1AF17174007E15EF /* RARecipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RARecipes.m; sourceTree = "<group>"; };
-		87C06A1D1AF1723D007E15EF /* RecipesTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesTableViewDataSource.h; sourceTree = "<group>"; };
-		87C06A1E1AF1723D007E15EF /* RecipesTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesTableViewDataSource.m; sourceTree = "<group>"; };
-		87C06A201AF184C3007E15EF /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
-		87C06A211AF184C3007E15EF /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
+		87C06A1A1AF17174007E15EF /* Recipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes.h; sourceTree = "<group>"; };
+		87C06A1B1AF17174007E15EF /* Recipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipes.m; sourceTree = "<group>"; };
+		87C06A1D1AF1723D007E15EF /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		87C06A1E1AF1723D007E15EF /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		87C06A201AF184C3007E15EF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		87C06A211AF184C3007E15EF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,16 +119,16 @@
 		71F67B56192C8D6A00E609F1 /* Recipe App */ = {
 			isa = PBXGroup;
 			children = (
-				71F67B5F192C8D6A00E609F1 /* RAAppDelegate.h */,
-				71F67B60192C8D6A00E609F1 /* RAAppDelegate.m */,
+				87C06A1A1AF17174007E15EF /* Recipes.h */,
+				87C06A1B1AF17174007E15EF /* Recipes.m */,
+				71F67B5F192C8D6A00E609F1 /* AppDelegate.h */,
+				71F67B60192C8D6A00E609F1 /* AppDelegate.m */,
 				87C06A171AF16D17007E15EF /* RecipeViewController.h */,
 				87C06A181AF16D17007E15EF /* RecipeViewController.m */,
-				87C06A201AF184C3007E15EF /* RecipeDetailViewController.h */,
-				87C06A211AF184C3007E15EF /* RecipeDetailViewController.m */,
-				87C06A1D1AF1723D007E15EF /* RecipesTableViewDataSource.h */,
-				87C06A1E1AF1723D007E15EF /* RecipesTableViewDataSource.m */,
-				87C06A1A1AF17174007E15EF /* RARecipes.h */,
-				87C06A1B1AF17174007E15EF /* RARecipes.m */,
+				87C06A201AF184C3007E15EF /* DetailViewController.h */,
+				87C06A211AF184C3007E15EF /* DetailViewController.m */,
+				87C06A1D1AF1723D007E15EF /* DataSource.h */,
+				87C06A1E1AF1723D007E15EF /* DataSource.m */,
 				71F67B62192C8D6A00E609F1 /* Images.xcassets */,
 				71F67B57192C8D6A00E609F1 /* Supporting Files */,
 			);
@@ -260,11 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C06A1C1AF17174007E15EF /* RARecipes.m in Sources */,
-				87C06A221AF184C3007E15EF /* RecipeDetailViewController.m in Sources */,
+				87C06A1C1AF17174007E15EF /* Recipes.m in Sources */,
+				87C06A221AF184C3007E15EF /* DetailViewController.m in Sources */,
 				71F67B5D192C8D6A00E609F1 /* main.m in Sources */,
-				87C06A1F1AF1723D007E15EF /* RecipesTableViewDataSource.m in Sources */,
-				71F67B61192C8D6A00E609F1 /* RAAppDelegate.m in Sources */,
+				87C06A1F1AF1723D007E15EF /* DataSource.m in Sources */,
+				71F67B61192C8D6A00E609F1 /* AppDelegate.m in Sources */,
 				87C06A191AF16D17007E15EF /* RecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

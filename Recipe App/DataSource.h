@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RecipesTableViewDataSource : NSObject <UITableViewDataSource>
+@interface DataSource : NSObject <UITableViewDataSource>
 
 @end

@@ -7,7 +7,7 @@
 //
 
 
-#import "RARecipes.h"
+#import "Recipes.h"
 
 static NSString * const RecipeTitleKey = @"recipeTitle";
 static NSString * const RecipeDescriptionKey = @"recipeDescription";
@@ -16,21 +16,26 @@ static NSString * const IngredientVolumeKey = @"ingredientVolume";
 static NSString * const IngredientTypeKey = @"ingredientType";
 static NSString * const DirectionsKey = @"directions";
 
-@implementation RARecipes
+@implementation Recipes
 
 + (NSInteger)count {
     return [[self recipes] count];
 }
 
-+ (NSDictionary *)recipeAtIndex:(NSInteger)index {
++ (NSDictionary *)recipeAtIndex:(NSInteger)index
+{
     return [self recipes][index];
 }
 
-+ (NSString *)titleAtIndex:(NSInteger)index {
+
+#pragma Title at index
++ (NSString *)titleAtIndex:(NSInteger)index
+{
     return [self recipes][index][RecipeTitleKey];
 }
 
-+ (NSString *)descriptionAtIndex:(NSInteger)index {
++ (NSString *)descriptionAtIndex:(NSInteger)index
+{
     return [self recipes][index][RecipeDescriptionKey];
 }
 
@@ -50,12 +55,22 @@ static NSString * const DirectionsKey = @"directions";
     return [self recipes][index][DirectionsKey];
 }
 
-+ (NSArray *)recipes {
++ (NSArray *)recipes
+{
     
     return @[
              @{
+                 
+                 
+                  /*  TableView  */      //  Title // Description // Ingredients  // Directions
+                 
                  RecipeTitleKey : @"Lynn's Best Herb-and-Garlic Pork",
+                 
                  RecipeDescriptionKey : @"Garlic, chili powder, and lots of fresh herbs make a wonderful marinade for the pork in this grilling recipe.",
+                 
+                 
+                 /*  Detail View Controller  */  // Ingredients // Directions //
+                 
                  RecipeIngredientsKey : @[
                          @{IngredientTypeKey: @"olive oil", IngredientVolumeKey: @"1/4 cup"},
                          @{IngredientTypeKey: @"garlic, minced", IngredientVolumeKey: @"6 cloves"},
@@ -67,14 +82,24 @@ static NSString * const DirectionsKey = @"directions";
                          @{IngredientTypeKey: @"pepper", IngredientVolumeKey: @"1/2 tsp"},
                          @{IngredientTypeKey: @"pork top loin roast", IngredientVolumeKey: @"3-4 lb"}
                          ],
+                 
+                 
                  DirectionsKey : @[@"In a small mixing bowl, combine all ingredients except meat. Place meat in a large plastic bag set in a shallow dish. Pour marinade over meat. Close bag. Turn several times. Marinate in refrigerator 2 to 24 hours, turning occasionally.",
                                    @"Remove meat from bag. Discard marinade. Insert a meat thermometer into the thickest part of the roast. (Or use an instant-read thermometer to start checking the roast after 1 hour of grilling.",
                                    @"In a covered grill, arrange preheated coals around drip pan (or follow manufacturer's directions for cooking over indirect heat on your gas grill.) Test for medium-low heat above pan. Place meat on grill rack over drip pan. Cover and grill for 1-1/2 to 2-1/4 hours or until meat thermometer registers 155 degree F. Remove roast and cover with foil. Let stand 15 minutes before carving. (The internal temperature of the meat should rise 5 degrees F upon standing, to 160 degree F.)",
                                    @"Remove strings and slice meat to serve. Use any leftover pork for sandwiches. Makes 12 servings."]
                  },
              @{
+                 
+                 
+                 /*  TableView  */
+                 
                  RecipeTitleKey : @"Glorious Glazed Salmon",
                  RecipeDescriptionKey : @"As the salmon grills, the tamari sauce and balsamic vinegar glaze caramelizes on the fish, adding color and flavor to the final dish.",
+                 
+                 
+                 /*  Detail View Controller  */
+                 
                  RecipeIngredientsKey : @[
                          @{IngredientTypeKey: @"balsamic vinegar", IngredientVolumeKey: @"1/2 cup"},
                          @{IngredientTypeKey: @"brown sugar", IngredientVolumeKey: @"1 tbs"},

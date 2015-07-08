@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RARecipes : NSObject
+@interface Recipes : NSObject
 
 + (NSInteger)count;
 

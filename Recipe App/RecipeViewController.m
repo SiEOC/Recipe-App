@@ -7,28 +7,30 @@
 //
 
 #import "RecipeViewController.h"
-#import "RecipesTableViewDataSource.h"
-#import "RecipeDetailViewController.h"
-#import "RARecipes.h"
+#import "DataSource.h"
+#import "DetailViewController.h"
+#import "Recipes.h"
 
 @interface RecipeViewController ()
 
 //step #2
 @property (strong ,nonatomic) UITableView *tableView;
-@property (strong,nonatomic) RecipesTableViewDataSource *dataSource;
+@property (strong,nonatomic) DataSource *dataSource;
 
 
 @end
 
 @implementation RecipeViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.title = @"Lunch Choices";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor redColor]};
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
-    self.dataSource = [RecipesTableViewDataSource new];
+    self.dataSource = [DataSource new];
     
     self.tableView.dataSource = self.dataSource;
     self.tableView.delegate = self;
@@ -41,8 +43,8 @@
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    RecipeDetailViewController *detailViewController = [RecipeDetailViewController new];
-    detailViewController.title = [RARecipes titleAtIndex:indexPath.row];
+    DetailViewController *detailViewController = [DetailViewController new];
+    detailViewController.title = [Recipes titleAtIndex:indexPath.row];
     detailViewController.recipeIndex = indexPath.row;
     
     [self.navigationController pushViewController:detailViewController animated:YES];
