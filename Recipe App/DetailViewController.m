@@ -75,16 +75,16 @@ static int topMargin = 20;
 }
 
 
-- (CGFloat)heightOfReferenceString:(NSString *)reference {
-    
-    CGRect bounding = [reference boundingRectWithSize:CGSizeMake(self.view.frame.size.width, 0)
-                                              options:NSStringDrawingUsesLineFragmentOrigin
-                                           attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]}
-                                              context:nil];
-    
-    return bounding.size.height;
-    
-}
+//- (CGFloat)heightOfReferenceString:(NSString *)reference {
+//    
+//    CGRect bounding = [reference boundingRectWithSize:CGSizeMake(self.view.frame.size.width, 0)
+//                                              options:NSStringDrawingUsesLineFragmentOrigin
+//                                           attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]}
+//                                              context:nil];
+
+//    return bounding.size.height;
+
+//}
 
     - (void)didReceiveMemoryWarning {
         [super didReceiveMemoryWarning];
