@@ -10,8 +10,7 @@
 #import "Recipes.h"
 #import "RecipeViewController.h"
 
-static int margin =15;
-static int topMargin = 20;
+static int nearField = -45;// Gets me near the descriptionbox but not on it. //Some Phones
 
 @interface DetailViewController ()
 
@@ -48,7 +47,7 @@ static int topMargin = 20;
     
     for (int i = 0; i < [Recipes ingredientCountAtIndex:self.recipeIndex]; i++)
     {
-        UILabel *ingredients = [[UILabel alloc] initWithFrame:CGRectMake(0.0,-45.0 + self.yValueSpacing,400, 330)];
+        UILabel *ingredients = [[UILabel alloc] initWithFrame:CGRectMake(0.0,nearField + self.yValueSpacing,400, 330)];
         
         ingredients.numberOfLines = 0;
         ingredients.text = [Recipes ingredientVolumeAtIndex:i inRecipeAtIndex:self.recipeIndex];;
@@ -58,11 +57,10 @@ static int topMargin = 20;
         [scrollView addSubview:ingredients];
         
         
-        UILabel *type = [[UILabel alloc] initWithFrame:CGRectMake(0.0,-45.0 + self.yValueSpacing,340,300)];
+        UILabel *type = [[UILabel alloc] initWithFrame:CGRectMake(0.0,nearField + self.yValueSpacing,340,300)];
         
         type.numberOfLines = 0;
         type.textColor = [UIColor whiteColor];
-//        type.backgroundColor = [UIColor yellowColor];
         type.font = [UIFont systemFontOfSize:15];
         type.text = [Recipes ingredientTypeAtIndex:i inRecipeAtIndex:self.recipeIndex];
         [scrollView addSubview:type];
@@ -75,16 +73,6 @@ static int topMargin = 20;
 }
 
 
-//- (CGFloat)heightOfReferenceString:(NSString *)reference {
-//    
-//    CGRect bounding = [reference boundingRectWithSize:CGSizeMake(self.view.frame.size.width, 0)
-//                                              options:NSStringDrawingUsesLineFragmentOrigin
-//                                           attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]}
-//                                              context:nil];
-
-//    return bounding.size.height;
-
-//}
 
     - (void)didReceiveMemoryWarning {
         [super didReceiveMemoryWarning];
